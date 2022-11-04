@@ -5,10 +5,10 @@ import processing.video.*;
 Capture video;
 
 void setup() {
-  size(320, 240);
+  size(800, 600);
 
   // Step 3. Initialize Capture object via Constructor
-  video = new Capture(this, 320, 240);
+  video = new Capture(this, 800, 600);
   video.start();
 }
 
