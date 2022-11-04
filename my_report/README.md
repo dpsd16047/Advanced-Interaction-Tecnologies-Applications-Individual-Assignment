@@ -20,7 +20,7 @@
 Πήρα ένα μικρό βίντεο από το κινητό μου (9 δευτερόλεπτα), το οποίο μετέτρεψα από mp4 σε mov. Έπειτα, μέσα από το περιβάλλον του Processing (Sketch -> Show Sketch Folder) το τοποθέτησα στον φάκελο data. Μέσα στην setup() δήλωσα το αρχείο μου, το path του και μέσω του loop το έκανα να παίζει σε επανάληψη. Μετά πήρα τον κώδικα από το *Example 16-2* και μέσα στη draw() άλλαξα τη μεταβλητή video. Τέλος, χρειάστηκε να αλλάξω τις διαστάσεις του βίντεο, ώστε να φαίνεται ολόκληρο.  
   
 Για το **QR Code**:  
-Για να φτιάξω ένα QR Code της σελίδας μου, μπήκα στο συγκεκριμένο (QR Code Generator)[http://qrcode.kaywa.com/] και το αποθήκευσα στον υπολογιστή μου με ένα png. Μέσω του *Example 15-1* κατάφερα μόλις κάνει Run να εμφανίζεται η εικόνα με το QR Code της σελίδας μου.  
+Για να φτιάξω ένα QR Code της σελίδας μου, μπήκα στο συγκεκριμένο [QR Code Generator](http://qrcode.kaywa.com) και το αποθήκευσα στον υπολογιστή μου με ένα png. Μέσω του *Example 15-1* κατάφερα μόλις κάνει Run να εμφανίζεται η εικόνα με το QR Code της σελίδας μου.  
   
 Για το **QR Code-Camera read**:  
 Εδώ χρησιμοποίησα κώδικα από το *QRcodeExample* και μόλις διαβάζει τον προσωπικό μου QR code, εμφανίζεται το προφίλ μου.  
@@ -42,5 +42,5 @@
 
 
 # Sources  
-(QR Code Generator)[http://qrcode.kaywa.com/]  
-(Nvidia)[https://www.nvidia.com/download/driverResults.aspx/114351/en-us/]
+[QR Code Generator](http://qrcode.kaywa.com/)  
+[Nvidia](https://www.nvidia.com/download/driverResults.aspx/114351/en-us/)
