@@ -1,8 +1,6 @@
 import TUIO.*;
 TuioProcessing tuioClient;
 
-
-
 float scale_factor = 1;
 PFont font;
 PImage img;
@@ -17,11 +15,8 @@ boolean callback = true;
 
 void setup()
 {
-
   size(900, 900);
   img = loadImage("alien.jpg"); 
-
-
 
   if (!callback) {
     frameRate(60);
@@ -34,17 +29,14 @@ void setup()
   imageheight = img.height;
 }
 
-
 void draw()
 {
   background(255);
   textFont(font, 18*scale_factor);
 
-
   ArrayList<TuioObject> tuioObjectList = tuioClient.getTuioObjectList();
   for (int i=0; i<tuioObjectList.size(); i++) {
     TuioObject tobj = tuioObjectList.get(i);
-
 
     if (tobj.getSymbolID()==0)
     {
@@ -53,39 +45,30 @@ void draw()
       image(img, 0, 0, imagewidth, imageheight);
     }
 
-
-
     if (loadImage)
     {
       if (tobj.getSymbolID()==1)
       {
-
-
         translate(tobj.getScreenX(width), tobj.getScreenY(height));
         rotate(tobj.getAngle());
       }
       
        if (tobj.getSymbolID()==2)
-      {
-        
+      { 
         zoom =constrain(zoom +tobj.getRotationSpeed()*3, 10, 150 );
         imagewidth = int(img.width* zoom/70); 
         imageheight = int(img.height*zoom/70);
       }
 
       if (tobj.getSymbolID()==3)
-      {
-        
+      { 
         green =map(tobj.getAngle(), 0, 6.2, 255, 0 );
         tint(255 , green , 255);
       }
         if (tobj.getSymbolID()==4)
-      {
-        
+      { 
         bright =map(tobj.getAngle(), 0, 6.2, 255, 0 );
-        tint(255,150);
-        
-    
+        tint(255,150); 
       }
       
     }
@@ -147,13 +130,15 @@ void removeTuioCursor(TuioCursor tcur) {
 }
 
 void addTuioBlob(TuioBlob tblb) {
-  if (verbose) println("add blb "+tblb.getBlobID()+" ("+tblb.getSessionID()+") "+tblb.getX()+" "+tblb.getY()+" "+tblb.getAngle()+" "+tblb.getWidth()+" "+tblb.getHeight()+" "+tblb.getArea());
+  if (verbose) println("add blb "+tblb.getBlobID()+" ("+tblb.getSessionID()+") "+tblb.getX()+" "+tblb.getY()+" 
+  "+tblb.getAngle()+" "+tblb.getWidth()+" "+tblb.getHeight()+" "+tblb.getArea());
 }
 
 
 
 void updateTuioBlob (TuioBlob tblb) {
-  if (verbose) println("set blb "+tblb.getBlobID()+" ("+tblb.getSessionID()+") "+tblb.getX()+" "+tblb.getY()+" "+tblb.getAngle()+" "+tblb.getWidth()+" "+tblb.getHeight()+" "+tblb.getArea()
+  if (verbose) println("set blb "+tblb.getBlobID()+" ("+tblb.getSessionID()+") "+tblb.getX()+" "+tblb.getY()+" 
+  "+tblb.getAngle()+" "+tblb.getWidth()+" "+tblb.getHeight()+" "+tblb.getArea()
     +" "+tblb.getMotionSpeed()+" "+tblb.getRotationSpeed()+" "+tblb.getMotionAccel()+" "+tblb.getRotationAccel());
 }
 
